@@ -1,0 +1,89 @@
+grid_search:
+  class: GridSearchCV
+  module: sklearn.model_selection
+  params:
+    cv: 5
+    verbose: 2
+model_selection:
+  module_0:
+    class: LogisticRegression
+    module: sklearn.linear_model
+    params:
+      solver: 'liblinear'
+    search_param_grid:
+      fit_intercept:
+      - true
+      - false
+      penalty:
+      - 'l2'
+      - 'l1'
+  module_1:
+    class: KNeighborsClassifier
+    module: sklearn.neighbors
+    params:
+      n_neighbors: 5
+    search_param_grid:
+      n_neighbors:
+      - 6
+      - 7
+      - 9
+      - 11
+  module_2:
+    class: SVC
+    module: sklearn.svm
+    params:
+      c: 1.0
+    search_param_grid:
+      kernel:
+      - 'linear'
+      - 'poly'
+      - 'sigmoid'
+    verbose:
+      - true
+      - false
+  module_3:
+    class: DecisionTreeClassifier
+    module: sklearn.tree
+    params:
+      min_samples_split: 2
+    search_param_grid:
+      max_depth:
+      - 30
+      - 50
+      - 80
+      - 100
+  module_4:
+    class: AdaBoostClassifier
+    module: sklearn.ensemble
+    params:
+      n_estimators: 50
+    search_param_grid:
+      n_estimators:
+      - 30
+      - 60
+      - 80
+  module_5:
+    class: GradientBoostingClassifier
+    module: sklearn.ensemble
+    params:
+      n_estimators: 40
+    search_param_grid:
+      n_estimators:
+      - 40
+      - 80
+      - 100
+  module_6:
+    class: RandomForestClassifier
+    module: sklearn.ensemble
+    params:
+      n_estimators: 50
+    search_param_grid:
+      n_estimators:
+      - 40
+      - 80
+      - 100
+      criterion:
+      - 'gini'
+      - 'entropy'
+    
+    

@@ -1,0 +1,10 @@
+Flask
+gunicorn
+pandas
+numpy
+sklearn
+datetime
+PyYAML
+evidently
+dill
+matplotlib

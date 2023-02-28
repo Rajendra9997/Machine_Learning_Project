@@ -1,0 +1,273 @@
+{% extends 'header.html' %}
+
+{% block head %}
+
+
+<title>Income Estimator</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-6 col-sm-12 col-xs-6 col-lg-6">
+
+
+        <form action="/predict" method="post">
+            <legend>Income Estimation Form</legend>
+            <div class="mb-3">
+                <label class="form-label">Age</label>
+                <input class="form-control" type="text" name="age" placeholder="Enter age of the person"
+                    required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Workclass</label>
+                
+                <select class="form-control" name="workclass" placeholder="Enter a value of workclass"
+                    required>
+
+                    <option value=" govt">
+                        Government
+                    </option>
+                    <option value=" private">
+                        Private
+                    </option>
+                    <option value=" self_employed">
+                        Self-employed
+                    </option>        
+                </select>    
+
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Education</label>
+                                
+                <select class="form-control" name="education" placeholder="Enter a value of education"
+                    required>
+
+                    <option value=" 10th_or_below">
+                        10th or below
+                    </option>
+                    <option value=" HS-grad">
+                        HS-grad
+                    </option>
+                    <option value=" Bachelors">
+                        Bachelors
+                    </option>        
+                    <option value=" Assoc-acdm_or_voc">
+                        Assoc-acdm_or_voc
+                    </option>
+                    <option value=" Masters_or_higher">
+                        Masters or Higher
+                    </option>
+                            
+                </select>    
+
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Education Number</label>
+                <input class="form-control" type="text" name="education-num"
+                    placeholder="Enter a value of education-num" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Marital Status</label>
+                <select class="form-control" name="marital-status" placeholder="Enter a value of marital-status"
+                    required>
+
+                    <option value=" single">
+                        Single
+                    </option>
+                    <option value=" couple">
+                        Couple
+                    </option>        
+                </select>    
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Occupation</label>
+                <select class="form-control" name="occupation" placeholder="Enter a value of occupation"
+                    required >
+                    <option value=" Adm-clerical">
+                        Adm-clerical
+                    </option>
+                    <option value=" Exec-managerial">
+                        Exec-managerial
+                    </option>
+                    <option value=" Handlers-cleaners">
+                        Handlers-cleaners
+                    </option>
+                    <option value=" Prof-specialty">
+                        Prof-specialty
+                    </option>
+                    <option value=" Other-service">
+                        Other-service
+                    </option>
+                    <option value=" Sales">
+                        Sales
+                    </option>
+                    <option value=" Craft-repair">
+                        Craft-repair
+                    </option>
+                    <option value=" Transport-moving">
+                        Transport-moving
+                    </option>
+                    <option value=" Farming-fishing">
+                        Farming-fishing
+                    </option>
+                    <option value=" Machine-op-inspct">
+                        Machine-op-inspct
+                    </option>
+                    <option value=" Tech-support">
+                        Tech-support
+                    </option>
+                    <option value=" Protective-serv">
+                        Protective-serv
+                    </option>
+                    <option value=" Armed-Forces">
+                        Armed-Forces
+                    </option>
+                    <option value=" Priv-house-serv">
+                        Priv-house-serv
+                    </option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Relationship</label>
+                <select class="form-control" name="relationship"
+                    placeholder="Enter a value of relationship" required >
+                    <option value=" Not-in-family">
+                        Not-in-family
+                    </option>
+                    <option value=" Husband">
+                        Husband
+                    </option>
+                    <option value=" Wife">
+                        Wife
+                    </option>
+                    <option value=" Own-child">
+                        Own-child
+                    </option>
+                    <option value=" Unmarried">
+                        Unmarried
+                    </option>
+                    <option value=" Other-relative">
+                        Other-relative
+                    </option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Sex</label>
+                <select class="form-control" name="sex" placeholder="Enter a value of sex"
+                    required>
+
+                    <option value=" Male">
+                        Male
+                    </option>
+                    <option value=" Female">
+                        Female
+                    </option>        
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Hours Per Week</label>
+                <input class="form-control" type="text" name="hours-per-week"
+                    placeholder="Enter a value of hours-per-week" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">country</label>
+                <select class="form-control" name="country" placeholder="Enter a value of country"
+                    required>
+
+                    <option value=" US">
+                        US
+                    </option>
+                    <option value=" Non-US">
+                        NON-US
+                    </option>        
+                </select>
+                
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Race</label>
+                <select class="form-control" name="race" placeholder="Enter a value of race"
+                    required>
+
+                    <option value=" Amer-Indian-Eskimo">
+                        Amer-Indian-Eskimo
+                    </option>
+                    <option value=" Asian-Pac-Islander">
+                        Asian-Pac-Islander
+                    </option>
+                    <option value=" Black">
+                        Black
+                    </option>
+                    <option value=" Other">
+                        Other
+                    </option>
+                    <option value=" White">
+                        White
+                    </option>
+
+                </select>
+            </div>
+            <div class="mb-3">
+
+                <input class="btn btn-primary" type="submit" value="Predict Income Value" required />
+            </div>
+
+        </form>
+    </div>
+
+    <div class="col-md-6 col-sm-12 col-xs-6 col-lg-6">
+        <div class="card">
+            <div class="card-header">
+              Adult Census Income
+            </div>
+            <div class="card-body">
+        {% if context['census_data'] is not none %}
+        <table class="table table-striped">
+            <caption>Adult Census Income Prediction </caption>
+            <tr>
+                <th>Input Feature</th>
+                <th>Feature Value</th>
+
+            </tr>
+            {% for column,value in context['census_data'].items() %}
+
+
+
+            <tr>
+                <td>{{column}}</td>
+                <td>{{value[0]}}</td>
+            </tr>
+
+            {% endfor %}
+            <tr>
+
+                <td><strong>Income Class</strong></td>
+                
+                {% if context['census_income_class'] == ' <=50K' %}
+                <td>
+                    <td><strong><span style="color: yellowgreen;">50K or less</span></strong></td>
+                </td>
+                {% else %}
+                <td>
+                    <td><strong><span style="color: blueviolet;">Greater than 50K</span></strong></td>
+                </td>
+                {% endif %}
+            </tr>
+        </table>
+
+        {% else %}
+       
+              <h5 class="card-title">Submit Form</h5>
+              <p class="card-text">Kindly provide necessary information to estimate adult census income</p>
+            
+         
+
+        {% endif %}
+        Go to <a href="/" class="btn btn-primary">Home</a>
+    </div>
+</div>
+    </div>
+
+    {% endblock %}
