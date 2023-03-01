@@ -5,7 +5,7 @@ from typing import List
 #Declaring variables for setup function
 PROJECT_NAME="Income-predictor"
 PROJECT_VERSION="0.0.4"
-PROJECT_AUTHOR="Rushikesh"
+PROJECT_AUTHOR="Rajendra"
 DESCRIPTION="This is end-to-end Machine Learning project \
     for Adult Census Income Prediction."
 REQUIREMENTS_FILE_NAME="requirements.txt"
