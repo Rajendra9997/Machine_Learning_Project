@@ -3,7 +3,7 @@ training_pipeline_config:
   artifact_dir: artifact
 
 data_ingestion_config:
-  dataset_download_url: https://github.com/RushiChalake03/Machine_Learning_Project/raw/main/adult_census_data.tgz
+  dataset_download_url: https://github.com/Rajendra9997/Machine_Learning_Project/raw/main/adult_census_data.tgz
   raw_data_dir: raw_data
   tgz_download_dir: tgz_data
   ingested_dir: ingested_data
