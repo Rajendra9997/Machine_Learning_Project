@@ -1,5 +1,5 @@
 ## Machine_Learning_Project
-This is my first end to end Machine Learning project
+Adult Census Income Prediction Project
 
 ### Software and account requirement:
 1. [Github Account](https://github.com/Rajendra9997/Machine_Learning_Project.git)
