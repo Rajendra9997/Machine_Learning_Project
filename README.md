@@ -2,8 +2,8 @@
 This is my first end to end Machine Learning project
 
 ### Software and account requirement:
-1. [Github Account](https://github.com/RushiChalake03/Machine_Learning_Project.git)
-2. [Cloud Platform account](https://github.com/RushiChalake03/Machine_Learning_Project.git)
+1. [Github Account](https://github.com/Rajendra9997/Machine_Learning_Project.git)
+2. [Cloud Platform account](https://github.com/Rajendra9997/Machine_Learning_Project.git)
 3. VS Code IDE
 4. GIT Cli
 
