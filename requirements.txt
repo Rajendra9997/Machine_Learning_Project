@@ -8,3 +8,4 @@ PyYAML
 evidently
 dill
 matplotlib
+cassandra-driver
