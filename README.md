@@ -38,7 +38,7 @@ The project is licensed under the [Apache license](http://www.apache.org/license
 
 
 ### Software and account requirement:
-1. [Github Account](https://github.com/RushiChalake03/Machine_Learning_Project.git)
+1. [Github Account](https://github.com/Rajendra9997/Machine_Learning_Project.git)
 2. [Railway account]
 3. VS Code IDE
 4. GIT Cli
